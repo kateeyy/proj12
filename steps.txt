@@ -1,0 +1,28 @@
+COMPOSER
+https://getcomposer.org/Composer-Setup.exe
+
+GIT BASH
+https://github.com/git-for-windows/git/releases/download/v2.41.0.windows.3/Git-2.41.0.3-64-bit.exe
+
+
+MPDF
+https://mpdf.github.io/installation-setup/installation-v7-x.html
+
+Open Gitbash under application folder in your project
+
+composer require mpdf/mpdf press enter
+
+Go to your codeigniter directory
+application/config/config.php
+
+SET composer_autoload to TRUE
+
+$config['composer_autoload'] = TRUE
+
+To generate PDF
+
+
+$mpdf = new \Mpdf\Mpdf();
+$mpdf->WriteHTML('<h1>Hello world!</h1>');
+$mpdf->Output();
+
